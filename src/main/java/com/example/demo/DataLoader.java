@@ -1,6 +1,5 @@
 package com.example.demo;
 
-
 import org.springframework.stereotype.Component;
 import org.springframework.boot.CommandLineRunner;
 
@@ -15,13 +14,17 @@ public class DataLoader implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        // Vloženie nového používateľa
+        /*for (int i = 1; i <= 500; i++) {
+            String name = "User " + i;
+            String email = "user" + i + "@example.com";
+            User user = new User();
+            user.setName(name);
+            user.setEmail(email);
 
+            // Uloženie používateľa do databázy
+            userRepository.save(user);
+        }*/
 
-        // Uloženie do databázy
-
-
-        System.out.println("Dáta boli vložené do tabuľky users.");
+        // System.out.println("500 používateľov bolo vložených do tabuľky users.");
     }
 }
-
