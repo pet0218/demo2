@@ -17,8 +17,8 @@ public class DataLoader implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        // Generovanie 1000 používateľov
-        /*for (int i = 1; i <= 1000; i++) {
+        /*// Generovanie 999 používateľov
+        for (int i = 1; i <= 999; i++) {
             String name = faker.name().fullName();  // Generuje celé meno
             String email = faker.internet().emailAddress();  // Generuje e-mailovú adresu
 
@@ -29,7 +29,17 @@ public class DataLoader implements CommandLineRunner {
             // Uloženie používateľa do databázy
             userRepository.save(user);
         }
-*/
-        System.out.println("1000 používateľov bolo vložených do tabuľky users.");
+
+        // Posledný používateľ bude Feri Pastorek
+        User feri = new User();
+        feri.setName("Feri Pastorek");
+        feri.setEmail(faker.internet().emailAddress());  // Generovanie náhodného e-mailu
+
+        // Uloženie Feriho do databázy
+        userRepository.save(feri);
+
+        System.out.println("1000 používateľov bolo vložených do tabuľky users, posledný sa volal Feri Pastorek.");
+        */
+
     }
 }
