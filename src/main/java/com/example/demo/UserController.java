@@ -18,6 +18,11 @@ public class UserController {
 
     @GetMapping("/users")
     public List<User> getAllUsers() {
+
+        EmployerLogic newEmplLgicb = new EmployerLogic();
+
+        System.out.println(newEmplLgicb.EmployerPrintln());
+
         return userService.getAllUsers();
     }
 }
