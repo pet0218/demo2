@@ -5,12 +5,12 @@ import org.springframework.stereotype.Component;
 import org.springframework.boot.CommandLineRunner;
 
 @Component
-public class DataLoader implements CommandLineRunner {
+public class DataLoaderTesting implements CommandLineRunner {
 
-    private final UserRepository userRepository;
+    private final TestUserRepository userRepository;
     private final Faker faker;  // Vytvoríme inštanciu Fakeru
 
-    public DataLoader(UserRepository userRepository) {
+    public DataLoaderTesting(TestUserRepository userRepository) {
         this.userRepository = userRepository;
         this.faker = new Faker();  // Iniciálizujeme Faker
     }
@@ -18,11 +18,12 @@ public class DataLoader implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         // Generovanie 999 používateľov
+        /*//
         for (int i = 1; i <= 999; i++) {
             String name = faker.name().fullName();  // Generuje celé meno
             String email = faker.internet().emailAddress();  // Generuje e-mailovú adresu
 
-            User user = new User();
+            TestUser user = new TestUser();
             user.setName(name);
             user.setEmail(email);
 
@@ -30,7 +31,11 @@ public class DataLoader implements CommandLineRunner {
             userRepository.save(user);
         }
 
+        // Posledný používateľ bude Feri Pastorek
 
+
+        System.out.println("1000 používateľov bolo vložených do tabuľky users, posledný sa volal Feri Pastorek.");
+*/
 
     }
 }
